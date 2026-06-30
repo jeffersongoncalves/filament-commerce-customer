@@ -2,8 +2,8 @@
 
 namespace JeffersonGoncalves\FilamentCommerce\Customer\Resources\Customer;
 
+use Filament\Forms\Form;
 use Filament\Resources\Resource;
-use Filament\Schemas\Schema;
 use Filament\Tables\Table;
 use JeffersonGoncalves\Commerce\Customer\Models\Customer;
 use JeffersonGoncalves\FilamentCommerce\Customer\CommerceCustomerPlugin;
@@ -26,9 +26,9 @@ class CustomerResource extends Resource
         }
     }
 
-    public static function form(Schema $schema): Schema
+    public static function form(Form $form): Form
     {
-        return CustomerForm::configure($schema);
+        return CustomerForm::configure($form);
     }
 
     public static function table(Table $table): Table
